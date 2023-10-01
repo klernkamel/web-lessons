@@ -34,16 +34,16 @@
             <a href="http://site.com/page?id=2">Ссылка с параметром id</a>
         </li>
         <li>
-            <a href="./">Относительная в текущем</a>
+            <a href="./index.html">Относительная в текущем</a>
         </li>
         <li>
             <a href="./about.html">about</a>
         </li>
         <li>
-            <a href="../">Относительная на католог выше</a>
+            <a href="./upper-one/upper-one.html">Относительная на католог выше</a>
         </li>
         <li>
-            <a href="../../">Относительная на 2 каталога выше</a>
+            <a href="./upper-one/upper-two/upper-two.html">Относительная на 2 каталога выше</a>
         </li>
         <li>
             <p>Посетите наш 
@@ -55,16 +55,17 @@
             <a href="https://www.kubsu.ru/index.php#section-content">Ссылка на фрагмент</a>
         </li>
         <li>
-            <img src="cBtn.png" alt="" usemap="#circle" width="100" height="100">
+            <div>
+                <img src="cBtn.png" alt="" usemap="#circle" width="100" height="100">
             <map name="circle">
                 <area shape="circle" coords="50,50,100" href="https://google.com/" alt="">
             </map>
-        </li>
-        <li>
             <img src="rBtn.png" alt="" usemap="#rect" width="200" height="180">
             <map name="rect">
                 <area shape="rect" coords="5,65,195,110" href="https://google.com/" alt="">
             </map>
+            </div>
+            
         </li>
         <li>
             <a href=" " >Пустая ссылка</a>
@@ -102,43 +103,43 @@
         <form action="#" method="get" class="lessons-form">
             <div class="col">
                 <label for="FIO">ФИО:</label>
-                <input type="text" name="name-form" id="FIO" placeholder="Фамилия Имя Очество">
+                <input type="text" name="name-form" id="FIO" placeholder="Фамилия Имя Очество" required>
             </div>
             <br>
             <div>
                 <label for="tel">Телефон:</label>
-                <input type="tel" name="tel-form" id="tel" placeholder="7900-000-0000" pattern="7[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                <input type="tel" name="tel-form" id="tel" placeholder="7900-000-0000" pattern="7[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                 <small>Формат: 7XXX-XXX-XXXX</small>
             </div>
             <br>
             <div>
                 <label for="email">Ваш emal:</label>
-                <input type="email" name="email-form" id="email">
+                <input type="email" name="email-form" id="email" required>
             </div>
             <br>
             <div>
                 <label for="date">Дата рождения:</label>
-                <input type="date" name="date-form" id="date">
+                <input type="date" name="date-form" id="date" required>
             </div>
             <br>
             <div>
                 <fieldset>
                     <legend>Ваш пол:</legend>
-                    <input type="radio" name="gender" id="male" value="Мужской" checked>
+                    <input type="radio" name="gender" id="male" value="Мужской" checked required>
                     <label for="male">Мужской</label>
                     <div>
-                        <input type="radio" name="gender" id="female" value="Женский">
+                        <input type="radio" name="gender" id="female" value="Женский" required>
                         <label for="female">Женский</label>
                     </div>
                     <div>
-                        <input type="radio" name="gender" id="attack-helicopter" value="Вертолет">
+                        <input type="radio" name="gender" id="attack-helicopter" value="Вертолет" required>
                         <label for="attack-helicopter">Attack Helicopter</label>
                     </div>
                 </fieldset>
                 <br>
                 <div>
                     <label for="drop-down">Ваш любимый ЯП?</label>
-                    <select name="drop-down-form" id="drop-down">
+                    <select name="drop-down-form" id="drop-down" required>
                         <option value="pascal">Pascal</option>
                         <option value="c">C</option>
                         <option value="c++">C++</option>
@@ -160,7 +161,7 @@
                 <br>
                 <div>
                     <label for="checkbox">С контактом ознакомлен (а)</label>
-                    <input type="checkbox" name="checkbox-form" id="checkbox">
+                    <input type="checkbox" name="checkbox-form" id="checkbox" required>
                 </div>
                 <br>
                 <div>
